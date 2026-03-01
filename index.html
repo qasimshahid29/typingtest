@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Speed Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="glow-overlay"></div>
+<canvas id="particle-canvas"></canvas>
+
+  <div id="container">
+    <h1>Typing Speed Test</h1>
+
+    <div id="mode-selector">
+  <button class="mode-btn active" data-time="15">15s</button>
+  <button class="mode-btn" data-time="30">30s</button>
+  <button class="mode-btn" data-time="60">60s</button>
+  <div id="results" class="hidden">
+    <div id="history-section">
+        <div id="heatmap-section">
+  <h3 id="heatmap-title">Mistake Heatmap</h3>
+  <p id="heatmap-subtitle">Keys you mistype the most</p>
+  <div id="keyboard"></div>
+</div>
+  <h3 id="history-title">Recent Runs</h3>
+  <table id="history-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>WPM</th>
+        <th>Accuracy</th>
+        <th>Mode</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody id="history-body">
+    </tbody>
+  </table>
+</div>
+    <canvas id="wpm-graph" width="780" height="120"></canvas>
+  <h2 id="grade">A</h2>
+  <p id="result-message">Great job!</p>
+  <div id="result-stats">
+    <div class="result-stat">
+      <span class="stat-label">WPM</span>
+      <span class="stat-value" id="result-wpm">0</span>
+    </div>
+    <div class="result-stat">
+      <span class="stat-label">Accuracy</span>
+      <span class="stat-value" id="result-accuracy">0%</span>
+    </div>
+    <div class="result-stat">
+      <span class="stat-label">Correct</span>
+      <span class="stat-value" id="result-correct">0</span>
+    </div>
+    <div class="result-stat">
+      <span class="stat-label">Incorrect</span>
+      <span class="stat-value" id="result-incorrect">0</span>
+    </div>
+  </div>
+  <p id="personal-best">🏆 New Personal Best!</p>
+</div>
+</div>
+
+    <div id="word-display"></div>
+
+    <input type="text" id="typing-input" placeholder="Start typing..." autocomplete="off" />
+
+    <div id="stats">
+      <span>WPM: <strong id="wpm">0</strong></span>
+      <span>Accuracy: <strong id="accuracy">100%</strong></span>
+      <span>Time: <strong id="timer">60</strong>s</span>
+    </div>
+
+    <button id="restart-btn">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
