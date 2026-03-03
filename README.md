@@ -7,7 +7,7 @@ a typing speed test i built from scratch using nothing but html, css and js. no 
 ![Made with JS](https://img.shields.io/badge/JavaScript-ES6-yellow)
 
 ## live demo
-[https://qasimshahid29.github.io/typingtest]() ← coming soon
+[https://qasimshahid29.github.io/typingtest](https://qasimshahid29.github.io/typingtest)
 
 ## what it does
 
